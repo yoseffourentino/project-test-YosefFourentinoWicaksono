@@ -1,10 +1,10 @@
 "use client"
 
+import { Suspense } from 'react'
 import Header from '@/components/Header'
 import Banner from '@/components/Banner'
 import IdeasList from './IdeasList'
 import BannerImage from '../../assets/bannerImage.jpg'
-
 
 
 export default function IdeasPage() {
@@ -18,7 +18,9 @@ export default function IdeasPage() {
                 title="Ideas"
                 subtitle="We Craft Modern Digital Experiences"
             />
-            <IdeasList />
+            <Suspense fallback={<div className="py-8">Loading ideas...</div>}>
+                <IdeasList />
+            </Suspense>
             </main>
         </>
     )
