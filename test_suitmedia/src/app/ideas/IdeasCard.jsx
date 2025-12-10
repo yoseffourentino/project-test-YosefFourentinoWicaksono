@@ -4,11 +4,13 @@ export default function IdeasCard({ item }) {
     return (
         <div className=" rounded-md overflow-hidden bg-white shadow-xl">
             <div className="relative w-full aspect-4/3">
-                <img
-                    loading="lazy"
-                    src={item.small_image?.[0]?.url}
+                <Image
+                    src={item.small_image?.[0]?.url || ''}
                     alt={item.title}
-                    className="object-cover w-full h-full"
+                    fill
+                    loading="lazy"
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
             </div>
 

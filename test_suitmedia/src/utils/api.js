@@ -14,7 +14,6 @@ export const fetchIdeas = async ({ page, size, sort }) => {
                 sort: sort,
             },
         })
-        console.log("API RESPONSE:", res.data.data);
         return {
             data: res.data.data,
             meta: res.data.meta,
