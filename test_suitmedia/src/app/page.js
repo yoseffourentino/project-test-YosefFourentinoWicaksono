@@ -9,7 +9,7 @@ export default function Home() {
         <main>
         <Banner
             imageUrl={BannerImage.src}
-            title="Ideas"
+            title="Home"
             subtitle="We Craft Modern Digital Experiences"
         />
         </main>
